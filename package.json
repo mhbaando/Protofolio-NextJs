@@ -2,6 +2,8 @@
   "name": "mohamud-portfolio",
   "version": "0.1.0",
   "private": true,
+  "author": "Mohamud A. Abshir",
+  "homepage": "https://mhbaando.com",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,9 +11,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "axios": "^0.26.1",
+    "framer-motion": "^6.3.1",
     "next": "12.1.5",
     "react": "18.0.0",
-    "react-dom": "18.0.0"
+    "react-dom": "18.0.0",
+    "react-icons": "^4.3.1",
+    "sass": "^1.50.1"
   },
   "devDependencies": {
     "@types/node": "17.0.25",

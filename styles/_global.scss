@@ -1,0 +1,47 @@
+/* Common Styles   
+ * HTML, BODY => Full width 
+ * li => remove any bullets
+ * Anchor Tag =>  remove underline'
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  // firefox scroll bar
+  scrollbar-width: thin;
+  scrollbar-color: $secondary-orange $primary-body;
+}
+
+html,
+body {
+  width: 100%;
+  background-color: $primary-body;
+}
+
+body {
+  scroll-behavior: smooth;
+
+  // edge, chrome and safari scroll bar
+  &::-webkit-scrollbar {
+    width: 9px;
+  }
+  &::-webkit-scrollbar-track {
+    background: $primary-body;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $secondary-orange;
+    border-radius: 20px;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}

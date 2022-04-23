@@ -1,0 +1,109 @@
+/**
+* this file containers helper classes, that helo achive certian style 
+*/
+
+// Common Containers
+.section {
+  padding: 0 3.125rem;
+
+  @media (max-width: 650px) {
+    padding: 0 20px;
+  }
+}
+.container {
+  max-width: 82rem;
+  margin: 0 auto;
+}
+
+// content conrainers
+.csection {
+  padding: 0 100px;
+  @media (max-width: 650px) {
+    padding: 0 40px;
+  }
+  @media (max-width: 390px) {
+    padding: 0 20px;
+  }
+}
+
+.ccontainer {
+  max-width: 1086px;
+  margin: 0 auto;
+}
+
+// social icons
+.mh__scIcons {
+  @include flex(space-between, center);
+  a {
+    margin-right: 8px;
+  }
+}
+
+// qari over flowga marku mobile menuga furanyahy
+.overflow-hidden {
+  overflow: hidden;
+}
+
+// menuga marku active yhay
+.active {
+  li {
+    color: $secondary-orange !important;
+  }
+
+  &::after {
+    content: '';
+    bottom: -40%;
+    left: 0%;
+    width: 100% !important;
+    height: 2px;
+    position: absolute;
+    @media (max-width: 950px) {
+      bottom: 0%;
+    }
+
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    background-color: $secondary-orange;
+  }
+}
+
+//
+.mh__cta-btn {
+  border: 0;
+  outline: none;
+
+  margin-right: 20px;
+  border-radius: 7px;
+  padding: 0.6rem 1.3rem;
+
+  @include raleway-font(17px, 600, $primary-body);
+  background: linear-gradient(
+    93.43deg,
+    $secondary-yello 2.58%,
+    $secondary-orange 105.11%
+  );
+}
+
+.dark {
+  background-color: $primary-dark;
+}
+
+// Mobile mnue Style
+.overlay {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  z-index: 7;
+
+  width: 100%;
+  height: 100vh;
+  cursor: pointer;
+  transform-origin: right;
+  background: linear-gradient(-90deg, $secondary-orange 0%, transparent 100%);
+
+  @media (min-width: 746px) {
+    display: none;
+  }
+}
