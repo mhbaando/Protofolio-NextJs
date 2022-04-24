@@ -2,7 +2,7 @@
 .mh__nav {
   @include flex(space-between, center);
   overflow-y: hidden;
-  margin-top: 20px;
+  padding-top: 20px;
 
   // logo style
   &--brand {
@@ -90,6 +90,10 @@
   height: 100vh;
   z-index: 0;
 
+  cursor: pointer;
+  transform-origin: right;
+  background: linear-gradient(-90deg, $secondary-orange 0%, transparent 100%);
+
   @media (min-width: 830px) {
     display: none;
   }
@@ -101,6 +105,7 @@
   right: 0%;
   top: 0%;
 
+  z-index: 1;
   height: 100vh;
   width: 300px;
 

@@ -17,7 +17,7 @@ const Navigation: React.FC = () => {
   }, [isOpen]);
 
   return (
-    <section className="section">
+    <section className="section ">
       <div className="container mh__nav">
         <Brand />
         <DesktopLinks />

@@ -1,0 +1,10 @@
+.mh__heading {
+  @include flex(flex-start, center);
+  @include raleway-font(16px, 600, $white-color);
+  h1 {
+    margin: 0;
+  }
+  span {
+    color: $secondary-orange;
+  }
+}

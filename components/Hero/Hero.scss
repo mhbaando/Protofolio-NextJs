@@ -1,0 +1,145 @@
+.mh__header {
+  @include flex(space-between, center);
+  margin-top: 50px;
+
+  @media (max-width: 780px) {
+    flex-direction: column;
+  }
+}
+
+// content
+.mh__header--content {
+  flex: 1;
+  @include flex(flex-start, flex-start, column);
+
+  &__title {
+    h1 {
+      @include raleway-font(55px, 700, $white-color);
+
+      margin: 0;
+      padding: 0;
+      line-height: 100%;
+
+      span {
+        color: $secondary-orange;
+      }
+
+      @media (max-width: 960px) {
+        font-size: 45px;
+      }
+
+      @media (max-width: 860px) {
+        font-size: 38px;
+      }
+    }
+
+    .lottie__animation {
+      @include flex(flex-start, center);
+      max-height: 70px;
+
+      // animated div
+      .handanimation {
+        svg {
+          width: 100px !important;
+        }
+      }
+    }
+  }
+
+  &__desc {
+    width: 100%;
+    margin: 10px 0 25px;
+
+    p {
+      @include roboto-font(18px, 400, $white-color);
+      line-height: 150%;
+
+      span {
+        color: $secondary-orange;
+      }
+
+      @media (max-width: 860px) {
+        font-size: 17px;
+      }
+    }
+  }
+
+  &__btns {
+    @include flex(flex-start, center);
+
+    .primary {
+      @include flex(space-between, center);
+
+      margin-right: 25px;
+      padding: 10px 14px;
+      border-radius: 7px;
+
+      background-color: $secondary-orange;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        opacity: 0.7;
+        transform: scale(0.99);
+      }
+
+      p {
+        @include raleway-font(16px, 600, $primary-dark);
+        margin-left: 7px;
+      }
+    }
+
+    .ghost {
+      @include flex(space-between, center);
+
+      opacity: 1;
+      padding: 10px 14px;
+      transform: scale(1);
+
+      margin-right: 25px;
+      border-radius: 7px;
+
+      background-color: transparent;
+      border: 1px solid $secondary-orange;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        opacity: 0.7;
+        transform: scale(0.99);
+      }
+
+      p {
+        @include raleway-font(16px, 600, $secondary-orange);
+        margin-left: 7px;
+      }
+    }
+  }
+}
+
+// image
+.mh__header--image {
+  flex: 1;
+  @include flex(flex-end, flex-end, column);
+
+  padding-left: 2rem;
+  position: relative;
+  transform-origin: bottom;
+
+  @media (max-width: 780px) {
+    margin-top: 50px;
+  }
+
+  .orange-bg {
+    position: absolute;
+    top: 0%;
+    right: -2%;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: 500px;
+    max-height: 500px;
+
+    border-radius: 50%;
+    background-color: $secondary-orange;
+  }
+}
