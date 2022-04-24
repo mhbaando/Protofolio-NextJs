@@ -12,8 +12,10 @@ export { default as SocialIcons } from './Navigation/SocialIcons';
 //components - header/hero section
 export { default as SubHeading } from './SubHeading/SubHeading';
 export { default as Heading } from './Heading/Heading';
+export { default as ServiceLists } from './Services/ServceList';
 
 // container
 export { default as Navigation } from './Navigation/Navigation';
 export { default as MobileMenu } from './Navigation/MobileMenu';
 export { default as HeroSection } from './Hero/Hero';
+export { default as About } from './About/About';

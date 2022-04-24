@@ -1,0 +1,130 @@
+.mh__about {
+  @include flex(space-between, center);
+  margin-top: 100px;
+  width: 100%;
+
+  @media (max-width: 1160px) {
+    flex-direction: column-reverse;
+  }
+}
+
+.mh__about--services {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  width: 47%;
+  gap: 20px;
+
+  @media (max-width: 1160px) {
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, 1fr);
+  }
+
+  @media (max-width: 587px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  div {
+    @include flex(space-between, center, column);
+    background-color: $primary-soft;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+
+    min-width: 240px;
+    padding: 30px 15px;
+    border-radius: 10px;
+
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(0.98);
+      background-color: $primary-dark;
+    }
+
+    h2 {
+      @include raleway-font(17px, 600, $white-color);
+      margin: 25px 0 15px;
+
+      span {
+        color: $secondary-orange;
+      }
+    }
+
+    p {
+      @include roboto-font(16px, 400, $light-white);
+
+      line-height: 150%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    &:nth-child(2n) {
+      margin-top: 20px;
+    }
+
+    @media (max-width: 1160px) {
+      &:nth-child(2n) {
+        margin-top: 0px;
+      }
+    }
+  }
+}
+
+.mh__about--me {
+  @include flex(space-between, flex-start, column);
+  width: 47%;
+
+  @media (max-width: 1160px) {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  p {
+    @include roboto-font(18px, 400, $light-white);
+    line-height: 180%;
+    margin: 25px 0;
+
+    span {
+      color: $secondary-orange;
+      font-weight: bold;
+    }
+  }
+}
+
+.mh__about--techs {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr 1fr;
+
+  @media (max-width: 1160px) {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+  }
+
+  @media (max-width: 587px) {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+  }
+
+  gap: 20px;
+  width: 100%;
+
+  img {
+    opacity: 1;
+    cursor: pointer;
+
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      opacity: 0.7;
+      transform: scale(0.99);
+    }
+
+    @media (max-width: 587px) {
+      width: 25px !important;
+    }
+  }
+}

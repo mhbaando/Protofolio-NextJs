@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 interface Title {
   heading: string;
 }
@@ -30,10 +30,14 @@ const Heading: React.FC<Title> = ({ heading }) => {
 
   return (
     <div className="mh__heading">
-      <h1>
+      <motion.h1
+        initial={{ opacity: 0 }}
+        whileInView={{ x: ['10%', '0%'], opacity: [0, 1] }}
+        transition={{ type: 'tween', duration: 0.8 }}
+      >
         {whiteHeading}
         <span>{orangeHeading}</span>
-      </h1>
+      </motion.h1>
     </div>
   );
 };

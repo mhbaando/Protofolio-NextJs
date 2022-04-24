@@ -1,6 +1,5 @@
 .mh__subheading {
   @include flex(flex-start, center);
-  margin-bottom: 10px;
   .horizentalLine {
     width: 20px;
     height: 2px;
@@ -12,5 +11,7 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     @include roboto-font(13px, 400, $white-color);
+    padding: 0;
+    margin: 0;
   }
 }
