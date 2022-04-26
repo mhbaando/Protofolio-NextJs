@@ -2,24 +2,20 @@ import Iservices from '../../interfaces/Iservices';
 
 const ServiceLists: Iservices[] = [
   {
-    name: 'UI/UX Designer',
+    name: 'UI/UX Designing',
     desc: 'I will design beautiful, clean, simple, modern websites & Apps, for your Bussines.',
-    iconUrl: '/assets/services/ui-ux.svg',
   },
   {
-    name: 'Fron-End Developer',
-    desc: 'I will develop your front-end website, in no time, with clean and understandable code.',
-    iconUrl: '/assets/services/front-end.svg',
+    name: 'Fron-End Developement',
+    desc: 'I will develop your front-end website, with clean and understandable code.',
   },
   {
-    name: 'Webflow Developer',
+    name: 'Webflow Developement',
     desc: 'I will develop a simple and beautiful website with no code with Webflow.',
-    iconUrl: '/assets/services/webflow.svg',
   },
   {
-    name: 'Wordpress Developer',
-    desc: 'I will customize every WordPress theme for you, to match your business needs.',
-    iconUrl: '/assets/services/wordPress.svg',
+    name: 'Wordpress Developement',
+    desc: 'I will customize every WordPress theme for you, to match your needs.',
   },
 ];
 

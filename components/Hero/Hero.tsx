@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { SubHeading } from '../index';
 import type { LottiePlayer } from 'lottie-web';
 import { motion } from 'framer-motion';
+import { ScrollContext } from '../../utils/Scroll-observer';
 
 const Hero: React.FC = () => {
   const refContainer = useRef<HTMLDivElement>(null);

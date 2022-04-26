@@ -2,6 +2,7 @@
   @include flex(space-between, center);
   margin-top: 50px;
 
+  top: 0;
   @media (max-width: 780px) {
     flex-direction: column;
   }

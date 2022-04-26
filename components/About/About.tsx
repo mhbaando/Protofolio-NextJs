@@ -1,59 +1,83 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { ServiceLists } from '../index';
+import { Heading, SubHeading } from '../index';
 import Techs from './Techs';
-import { ServiceLists, SubHeading, Heading } from '../index';
 
 const About: React.FC = () => {
   const titleVarient = {
     inView: { y: ['5%', '0%'], opacity: [0, 0.5, 1] },
   };
+  const serviceParent = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        easings: 'easeInOut',
+        staggerChildren: 0.8,
+      },
+    },
+  };
 
-  const Services = ServiceLists.map((service, index) => {
+  const serviceChild = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1 },
+  };
+  const services = ServiceLists.map((service, index) => {
     return (
       <motion.div
+        variants={serviceParent}
+        initial="hidden"
+        animate="show"
         whileInView={{
           opacity: [0, 1],
-          y: [index % 2 === 0 ? '5%' : '-5%', '0%'],
+          y: [`${index % 2 === 0 ? '30%' : '60%'}`, '0%'],
         }}
+        className="mh__about--service__list"
       >
-        <Image src={service.iconUrl} width={49} height={49} />
-        <h2>
-          {service.name.split(' ')[0]} <span>{service.name.split(' ')[1]}</span>
-        </h2>
-        <p>{service.desc}</p>
+        <motion.h2 variants={serviceChild}>
+          {service.name.split(' ')[0]} <br></br>
+          <span>{service.name.split(' ')[1]}</span>
+        </motion.h2>
+        <motion.p variants={serviceChild}>{service.desc}</motion.p>
       </motion.div>
     );
   });
 
   return (
-    <section className="csection">
+    <section className="csection about-bg">
       <div className="ccontainer">
+        <SubHeading subheading="MY SERVICES" />
+        <Heading heading="What I Do" />
         <div className="mh__about">
-          <div className="mh__about--services">{Services}</div>
-          <div className="mh__about--me">
-            <SubHeading subheading="WHO Am I" />
+          <div className="mh__about--service">{services}</div>
+          <motion.div
+            variants={titleVarient}
+            whileInView={titleVarient.inView}
+            className="mh__about--me"
+          >
+            <SubHeading subheading="WHO AM I" />
             <Heading heading="About me" />
-            <motion.p variants={titleVarient} whileInView={titleVarient.inView}>
-              I am proffesional front-end devloper with almost two years of
-              experience in developing websites using various technologies
-              including
-              <span>
-                {' '}
-                html, css, scss, javaScript, Reactjs, Netxjs Angular, Webflow &
-                wordpress,{' '}
-              </span>
-              also i am <span>UI/UX Designer</span>, wih background of 2D
-              Animation and Vediography.
-            </motion.p>
-            <motion.div
-              whileInView={{ y: ['-20%', '0%'], opacity: ['0', '1'] }}
-              transition={{ ease: 'easeInOut' }}
-              className="mh__about--techs"
-            >
-              <Techs />
-            </motion.div>
-          </div>
+            <div className="mh__about--me__info">
+              <p>
+                I am a professional <span>front-end</span> developer,{' '}
+                <span>UI/X</span> Designer, <span>Co-founder</span>, and
+                <span> freelancer</span> with almost <span>2+ years</span> of
+                experience in developing websites using various technologies
+                with a background in <span>2D</span> Animation and{' '}
+                <span>Videography</span>.
+              </p>
+              <motion.div
+                className="icons"
+                whileInView={{ y: ['10%', '0%'], opacity: ['0', '1'] }}
+                transition={{ ease: 'easeInOut' }}
+              >
+                <Techs />
+              </motion.div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
