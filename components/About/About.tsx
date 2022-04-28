@@ -6,6 +6,7 @@ import { Heading, SubHeading } from '../index';
 import Techs from './Techs';
 
 const About: React.FC = () => {
+  // animation for the title and the about section
   const titleVarient = {
     inView: { y: ['5%', '0%'], opacity: [0, 0.5, 1] },
   };
@@ -21,13 +22,17 @@ const About: React.FC = () => {
     },
   };
 
+  // animation each service text
   const serviceChild = {
     hidden: { opacity: 0 },
     show: { opacity: 1 },
   };
+
+  // loop of the services
   const services = ServiceLists.map((service, index) => {
     return (
       <motion.div
+        key={index}
         variants={serviceParent}
         initial="hidden"
         animate="show"

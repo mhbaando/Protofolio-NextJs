@@ -13,6 +13,7 @@ export { default as SocialIcons } from './Navigation/SocialIcons';
 export { default as SubHeading } from './SubHeading/SubHeading';
 export { default as Heading } from './Heading/Heading';
 export { default as ServiceLists } from './Services/ServceList';
+export { default as LastProjetcs } from './Projects/LastProjects';
 
 // container
 export { default as Navigation } from './Navigation/Navigation';

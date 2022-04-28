@@ -3,7 +3,7 @@ import Iservices from '../../interfaces/Iservices';
 const ServiceLists: Iservices[] = [
   {
     name: 'UI/UX Designing',
-    desc: 'I will design beautiful, clean, simple, modern websites & Apps, for your Bussines.',
+    desc: 'I will design beautiful, clean, simple, modern websites & Apps.',
   },
   {
     name: 'Fron-End Developement',

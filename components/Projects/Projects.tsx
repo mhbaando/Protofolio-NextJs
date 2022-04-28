@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
-
+import Image from 'next/image';
 const Projects: React.FC = () => {
-  return <h1>working</h1>;
+  return (
+    <section className="csection">
+      <div className="ccontainer">
+        <div className="mh__projetcs"></div>
+      </div>
+    </section>
+  );
 };
 
 export default Projects;

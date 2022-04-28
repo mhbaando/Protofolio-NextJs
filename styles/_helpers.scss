@@ -68,4 +68,12 @@
 
 .dark {
   background-color: $primary-dark;
+  padding-bottom: 20px;
+}
+
+// filter active
+.filter-active {
+  background-color: $secondary-orange !important;
+  color: $primary-dark !important;
+  transition: all 0.3s ease-in-out;
 }

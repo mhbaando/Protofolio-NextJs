@@ -1,7 +1,13 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { Navigation, HeroSection, About, Projects } from '../components/index';
-const Home: NextPage = () => {
+import {
+  Navigation,
+  HeroSection,
+  About,
+  LastProjetcs,
+} from '../components/index';
+
+const Home: NextPage = ({ data }: any) => {
   return (
     <>
       <Head>
@@ -43,7 +49,7 @@ const Home: NextPage = () => {
           href="/assets/favicons/favicon-16x16.png"
         />
         <link rel="manifest" href="/assets/favicons/site.webmanifest"></link>
-        <link rel="icon" href="2/assets/favicons/favicon.ico" />
+        <link rel="icon" href="/assets/favicons/favicon.ico" />
       </Head>
 
       <header className="dark">
@@ -51,9 +57,19 @@ const Home: NextPage = () => {
         <HeroSection />
       </header>
       <About />
-      <Projects />
+      <LastProjetcs props={data} />
     </>
   );
 };
 
 export default Home;
+
+export const getServerSideProps = async () => {
+  const res = await fetch('http://localhost:1337/api/projects?populate=*');
+  const { data } = await res.json();
+  return {
+    props: {
+      data,
+    },
+  };
+};

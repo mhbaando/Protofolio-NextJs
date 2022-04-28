@@ -96,8 +96,8 @@ const Hero: React.FC = () => {
           <Image
             src="/assets/me/MohamudAbshir-.png"
             alt="Mohamud A. Asbhir"
-            width={445}
-            height={491}
+            width={450}
+            height={505}
             priority
             className="my-image"
           />

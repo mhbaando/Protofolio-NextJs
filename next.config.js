@@ -2,7 +2,11 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['res.cloudinary.com'],
+    domains: ['res.cloudinary.com', 'localhost'],
+  },
+
+  env: {
+    BASE_URI: 'http://localhost:1337',
   },
 };
 
