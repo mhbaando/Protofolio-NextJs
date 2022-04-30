@@ -52,7 +52,7 @@ const About: React.FC = () => {
   });
 
   return (
-    <section className="csection about-bg">
+    <section className="csection bg-dark about-bg">
       <div className="ccontainer">
         <SubHeading subheading="MY SERVICES" />
         <Heading heading="What I Do" />

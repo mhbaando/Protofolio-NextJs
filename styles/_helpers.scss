@@ -77,3 +77,11 @@
   color: $primary-dark !important;
   transition: all 0.3s ease-in-out;
 }
+
+.bg-dark {
+  background: linear-gradient(180deg, $primary-dark 0%, $primary-body 100%);
+}
+
+.bg-dark-reverse {
+  background: linear-gradient(180deg, $primary-body 0%, $primary-dark 100%);
+}

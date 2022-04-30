@@ -4,11 +4,11 @@ import React, { useContext, useEffect, useRef, useState } from 'react';
 import { SubHeading } from '../index';
 import type { LottiePlayer } from 'lottie-web';
 import { motion } from 'framer-motion';
-import { ScrollContext } from '../../utils/Scroll-observer';
 
 const Hero: React.FC = () => {
   const refContainer = useRef<HTMLDivElement>(null);
   const [lottie, setLottie] = useState<LottiePlayer | null>(null);
+
   // impor lottie
   useEffect(() => {
     import('lottie-web').then((Lottie) => setLottie(Lottie.default));

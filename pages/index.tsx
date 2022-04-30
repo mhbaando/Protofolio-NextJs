@@ -5,9 +5,12 @@ import {
   HeroSection,
   About,
   LastProjetcs,
+  Clients,
+  Contacts,
+  Footer,
 } from '../components/index';
 
-const Home: NextPage = ({ data }: any) => {
+const Home: NextPage = ({ data, clinetData }: any) => {
   return (
     <>
       <Head>
@@ -56,8 +59,15 @@ const Home: NextPage = ({ data }: any) => {
         <Navigation />
         <HeroSection />
       </header>
-      <About />
-      <LastProjetcs props={data} />
+      <main>
+        <About />
+        <LastProjetcs props={data} limit={true} />
+        <Clients props={clinetData} />
+        <Contacts />
+      </main>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 };
@@ -65,11 +75,17 @@ const Home: NextPage = ({ data }: any) => {
 export default Home;
 
 export const getServerSideProps = async () => {
+  // projects
   const res = await fetch('http://localhost:1337/api/projects?populate=*');
   const { data } = await res.json();
+
+  // clients
+  const clientRes = await fetch('http://localhost:1337/api/clients?populate=*');
+  const clinetData = await clientRes.json();
   return {
     props: {
       data,
+      clinetData,
     },
   };
 };

@@ -1,0 +1,13 @@
+.mh__footer {
+  margin-top: 100px;
+  @include flex(center, center, column);
+  padding: 2rem 0;
+
+  .mh__scIcons {
+    margin: 25px 0;
+  }
+
+  p {
+    @include roboto-font(16px, 400, $light-white);
+  }
+}

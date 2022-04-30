@@ -2,7 +2,7 @@
 .mh__nav {
   @include flex(space-between, center);
   overflow-y: hidden;
-  padding-top: 20px;
+  padding-top: 50px;
 
   // logo style
   &--brand {

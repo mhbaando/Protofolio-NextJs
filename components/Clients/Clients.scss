@@ -1,0 +1,20 @@
+.mh__clients {
+  margin-top: 100px;
+}
+
+.mh__clients--holder {
+  @include flex(space-between, center);
+}
+
+.mh__clients-image {
+  margin-top: 50px;
+  position: relative;
+
+  height: 80px;
+  width: 200px;
+  padding: 1rem;
+
+  @media (max-width: 500px) {
+    margin-top: 0px;
+  }
+}

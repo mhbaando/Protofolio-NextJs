@@ -1,0 +1,61 @@
+.mh__cta {
+  width: 100%;
+  margin-top: 100px;
+
+  padding: 2rem;
+  border-radius: 20px;
+
+  background: linear-gradient(90deg, $primary-body 10%, rgba(0, 0, 0, 0.2) 100%),
+    url('/assets/cta/cta.jpg');
+  background-position: center;
+  background-size: cover;
+
+  @media (max-width: 870px) {
+    padding: 1rem 2rem;
+  }
+}
+
+.mh__cta--info {
+  @include flex(space-between, center);
+
+  @media (max-width: 734px) {
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  h2 {
+    @include raleway-font(25px, 600, $white-color);
+    margin: 10px 0;
+    span {
+      color: $secondary-orange;
+    }
+  }
+
+  p {
+    @include roboto-font(16px, 400, $light-white);
+    margin-bottom: 20px;
+  }
+
+  button {
+    border: none;
+    outline: none;
+
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+
+    border-radius: 5px;
+    background-color: $secondary-orange;
+
+    @include roboto-font(16px, 500, $primary-body);
+
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(0.99);
+      opacity: 0.7;
+    }
+  }
+}

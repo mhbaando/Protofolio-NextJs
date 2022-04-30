@@ -5,10 +5,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Heading, SubHeading } from '../index';
 import { IProject } from '../../interfaces/Iproject';
 
-const LastProjetcs: React.FC = ({ props }: any) => {
-  const data: IProject[] = props;
+const LastProjetcs: React.FC = ({ props, limit }: any) => {
   let imageURI = '';
+  const data: IProject[] = props;
   const [selected, setIsSelected] = useState(0);
+
   const techies = [
     'All',
     'React',
@@ -22,7 +23,7 @@ const LastProjetcs: React.FC = ({ props }: any) => {
   // processing images in here
   // get the last 7 elements from the projetcs array
   const lastProj = filteredDataBasedOnTechSelected
-    .slice(0, 7)
+    .slice(limit ? 0 : undefined, limit ? 7 : undefined)
     .map((project) => {
       imageURI = project.attributes.thumbnail.data?.attributes?.url;
       return (
