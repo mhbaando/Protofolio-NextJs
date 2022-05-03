@@ -23,6 +23,7 @@ please also check my social networks with this tag`mhbaando`
 ## CLONE AND RUN THE PROJECT
 
 - Incase You Need to Clone or Download this project
+- This is website built in `Next js` `SCSS` `TypeScript` `Strapi`
 - Make sure `node` Is installed on your computer
 - Open Terminal with in the folder and type `npm install` to install all
   dependecies
@@ -31,4 +32,8 @@ please also check my social networks with this tag`mhbaando`
 
 ## SCREENSHOT OF THE WEBSITE
 
-![](src/Assets/HomePage.png)
+![](public/assets/screenshot/mhbaando.png)
+
+---
+
+![](public/assets/screenshot/mhscreenshot.png)

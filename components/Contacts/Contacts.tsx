@@ -14,7 +14,7 @@ const Contacts: React.FC = () => {
   };
 
   return (
-    <section className="csection bg-dark">
+    <section className="csection bg-dark" id="contacts">
       <div className="ccontainer">
         <div className="mh__contacts">
           <div className="mh__contacts--data">

@@ -5,11 +5,14 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Heading, SubHeading } from '../index';
 import { IProject } from '../../interfaces/Iproject';
 
-const LastProjetcs: React.FC = ({ props, limit }: any) => {
+const LastProjetcs: React.FC = ({
+  props,
+  limit,
+  subheading = 'MY RECENT WORK',
+}: any) => {
   let imageURI = '';
   const data: IProject[] = props;
   const [selected, setIsSelected] = useState(0);
-
   const techies = [
     'All',
     'React',
@@ -43,7 +46,12 @@ const LastProjetcs: React.FC = ({ props, limit }: any) => {
             key={project.id}
           >
             {imageURI && (
-              <Image src={imageURI} layout="fill" objectFit="cover" />
+              <Image
+                src={imageURI}
+                layout="fill"
+                priority={true}
+                objectFit="cover"
+              />
             )}
             <h2>{project.attributes.title}</h2>
           </motion.div>
@@ -56,7 +64,7 @@ const LastProjetcs: React.FC = ({ props, limit }: any) => {
       <div className="ccontainer">
         <div className="mh__projetcs-title">
           <div>
-            <SubHeading subheading="MY RECENT WORK" />
+            <SubHeading subheading={subheading} />
             <Heading heading="Projects" />
           </div>
 

@@ -14,12 +14,14 @@ const Clients: React.FC = ({ props: { data } }) => {
       <div className="mh__clients-image" key={client.id}>
         {imageURL && (
           <Link key={client.id} href={client.attributes.website} passHref>
-            <Image
-              src={imageURL}
-              alt={client.attributes.name}
-              layout="fill"
-              objectFit="contain"
-            ></Image>
+            <a target="_blank" title={client.attributes.website}>
+              <Image
+                src={imageURL}
+                alt={client.attributes.name}
+                layout="fill"
+                objectFit="contain"
+              ></Image>
+            </a>
           </Link>
         )}
       </div>
@@ -27,7 +29,7 @@ const Clients: React.FC = ({ props: { data } }) => {
   });
 
   return (
-    <section className="csection bg-dark-reverse">
+    <section className="csection bg-dark-reverse" id="clients">
       <div className="ccontainer">
         <div className="mh__clients">
           <SubHeading subheading="WHO DID I WORK WITH" />

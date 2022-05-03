@@ -1,0 +1,65 @@
+.mh-project-header {
+  height: 320px;
+  @include flex(center, center, column);
+
+  @media (min-width: 650px) {
+    height: 420px;
+  }
+}
+
+.mh__project {
+  max-width: 864px;
+
+  margin: 50px auto 0;
+  @include flex(center, flex-start, column);
+
+  &--desc {
+    p {
+      @include roboto-font(17px, 400, $light-white);
+      line-height: 180%;
+    }
+  }
+
+  &--details {
+    flex-wrap: wrap;
+    width: 100%;
+
+    @include flex(space-between, center);
+
+    margin-top: 25px;
+
+    div {
+      margin: 10px 0;
+      @include flex(space-between, center);
+
+      h2 {
+        @include raleway-font(16px, 600, $white-color);
+      }
+      p {
+        @include roboto-font(16px, 400, $secondary-orange);
+        a {
+          @include roboto-font(16px, 400, $secondary-orange);
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}
+
+.mh__projects--fullphoto {
+  width: 100%;
+  border-radius: 10px;
+
+  margin-top: 50px;
+  position: relative;
+
+  display: grid; /* here */
+  align-items: start; /* disable stretch alignment */
+
+  min-height: 1979px;
+  height: 100%;
+
+  img {
+    height: 100%;
+  }
+}

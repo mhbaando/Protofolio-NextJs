@@ -56,7 +56,7 @@ const Projects: NextPage = ({ data }: any) => {
       </Head>
       <div className="bg-dark">
         <Navigation />
-        <LastProjetcs props={data} limit={false} />
+        <LastProjetcs props={data} limit={false} subheading="LATEST WORK" />
         <CallToAction />
         <Footer />
       </div>
@@ -68,7 +68,9 @@ export default Projects;
 
 export const getServerSideProps = async () => {
   // projects
-  const res = await fetch('http://localhost:1337/api/projects?populate=*');
+  const res = await fetch(
+    'https://mhbaando.herokuapp.com/api/projects?populate=*'
+  );
   const { data } = await res.json();
 
   return {

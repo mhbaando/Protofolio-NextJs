@@ -11,6 +11,7 @@ import {
 } from '../components/index';
 
 const Home: NextPage = ({ data, clinetData }: any) => {
+  console.log(data);
   return (
     <>
       <Head>
@@ -76,11 +77,15 @@ export default Home;
 
 export const getServerSideProps = async () => {
   // projects
-  const res = await fetch('http://localhost:1337/api/projects?populate=*');
+  const res = await fetch(
+    'https://mhbaando.herokuapp.com/api/projects?populate=*'
+  );
   const { data } = await res.json();
 
   // clients
-  const clientRes = await fetch('http://localhost:1337/api/clients?populate=*');
+  const clientRes = await fetch(
+    'https://mhbaando.herokuapp.com/api/clients?populate=*'
+  );
   const clinetData = await clientRes.json();
   return {
     props: {

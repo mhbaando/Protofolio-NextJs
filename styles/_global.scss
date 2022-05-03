@@ -18,11 +18,11 @@ html,
 body {
   width: 100%;
   background-color: $primary-body;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
-  scroll-behavior: smooth;
-
   // edge, chrome and safari scroll bar
   &::-webkit-scrollbar {
     width: 9px;

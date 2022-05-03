@@ -15,11 +15,11 @@ export interface IProject {
       };
     };
     screenshots: {
-      data: {
+      data: [
         attributes: {
           url: string;
-        };
-      };
+        }
+      ];
     };
 
     tech_stacks: {
