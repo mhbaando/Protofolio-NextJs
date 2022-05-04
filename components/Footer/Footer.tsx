@@ -8,7 +8,12 @@ const Footer: React.FC = () => {
     <section className="csection bg-dark-reverse ">
       <div className="ccontainer">
         <div className="mh__footer">
-          <Image src="/assets/logo.svg" width={167} height={25} />
+          <Image
+            src="/assets/logo.svg"
+            width={167}
+            height={25}
+            alt="mhbaando logo"
+          />
           <SocialIcons place="footer" />
           <p>{`© ${yearNow} Copyright Allrights Reserved`}</p>
         </div>

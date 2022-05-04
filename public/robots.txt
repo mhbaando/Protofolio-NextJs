@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://mhbaando.com
+
+# Sitemaps
+Sitemap: https://mhbaando.com/sitemap.xml

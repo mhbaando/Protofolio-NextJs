@@ -14,14 +14,14 @@ const ContactFrom: React.FC = () => {
     success: undefined,
   });
 
-  const contactForm = useRef();
+  const contactForm = useRef<HTMLFormElement | null>(null);
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const onSubmit: SubmitHandler<IformInput> = async (data, e) => {
+  const onSubmit: SubmitHandler<any> = async (data: any, e: any) => {
     setIsSubmitted((prev) => {
       return {
         ...prev,

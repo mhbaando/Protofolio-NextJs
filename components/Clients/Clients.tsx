@@ -4,8 +4,10 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Heading, SubHeading } from '../index';
 import { IClient } from '../../interfaces/Iclients';
-
-const Clients: React.FC = ({ props: { data } }) => {
+interface Props {
+  props: any;
+}
+const Clients: React.FC<Props> = ({ props: { data } }: any) => {
   const clientsData: IClient[] = data;
 
   const clients = clientsData.map((client) => {

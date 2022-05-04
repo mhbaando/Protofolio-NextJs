@@ -65,6 +65,7 @@ const Hero: React.FC = () => {
                   src="/assets/heroIcons/LinkedIn.svg"
                   width={18}
                   height={18}
+                  alt="mbaando"
                 />
                 <p>LinkedIn</p>
               </a>
@@ -75,6 +76,7 @@ const Hero: React.FC = () => {
                   src="/assets/heroIcons/github.svg"
                   width={18}
                   height={18}
+                  alt="mhbaando"
                 />
                 <p>GitHub</p>
               </a>

@@ -4,8 +4,12 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Heading, SubHeading } from '../index';
 import { IProject } from '../../interfaces/Iproject';
-
-const LastProjetcs: React.FC = ({
+interface Props {
+  props: any;
+  limit: boolean;
+  subheading?: string;
+}
+const LastProjetcs: React.FC<Props> = ({
   props,
   limit,
   subheading = 'MY RECENT WORK',
@@ -51,6 +55,7 @@ const LastProjetcs: React.FC = ({
                 layout="fill"
                 priority={true}
                 objectFit="cover"
+                alt={project.attributes.title}
               />
             )}
             <h2>{project.attributes.title}</h2>

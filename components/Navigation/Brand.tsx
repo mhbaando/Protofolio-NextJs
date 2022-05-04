@@ -5,10 +5,10 @@ import Image from 'next/image';
 // this compomnent holds us the logo
 const Brand: React.FC = () => {
   return (
-    <div className='mh__nav--brand'>
-      <Link href='/'>
+    <div className="mh__nav--brand">
+      <Link href="/">
         <a>
-          <Image src='/assets/logo.svg' width={145} height={22} />
+          <Image src="/assets/logo.svg" width={145} height={22} alt="Logo" />
         </a>
       </Link>
     </div>

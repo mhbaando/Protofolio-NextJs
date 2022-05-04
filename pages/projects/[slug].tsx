@@ -28,7 +28,9 @@ const Slug: NextPage = ({ data }: any) => {
   );
 
   const screenshot = data.map((project: IProject) =>
-    project.attributes.screenshots.data.map((screeen) => screeen.attributes.url)
+    project.attributes.screenshots.data.map(
+      (screeen: any) => screeen.attributes.url
+    )
   );
   return (
     <>
@@ -130,14 +132,19 @@ const Slug: NextPage = ({ data }: any) => {
                 <h2>Live Url : </h2>
                 <p>
                   &nbsp; &nbsp;
-                  <a href={mainData.liveUrl} target="_blank">
+                  <a href={mainData.liveUrl} target="_blank" rel="noreferrer">
                     {mainData.liveUrl}
                   </a>
                 </p>
               </div>
             </div>
             <div className="mh__projects--fullphoto">
-              <Image src={`${screenshot}`} layout="fill" priority={true} />
+              <Image
+                src={`${screenshot}`}
+                layout="fill"
+                priority={true}
+                alt={mainData.title}
+              />
             </div>
           </div>
         </div>
@@ -152,7 +159,7 @@ export default Slug;
 
 // gett all static paths
 export const getStaticPaths = async () => {
-  const res = await fetch('http://localhost:1337/api/projects');
+  const res = await fetch('https://mhbaando.herokuapp.com/api/projects');
   const { data } = await res.json();
 
   const paths = data.map((project: IProject) => ({
@@ -167,9 +174,9 @@ export const getStaticPaths = async () => {
 
 /// read the slug's corrsponidg value
 
-export const getStaticProps = async ({ params }) => {
+export const getStaticProps = async ({ params }: any) => {
   const res = await fetch(
-    `http://localhost:1337/api/projects?populate=*&filters[slug][$eq]=${params.slug}`
+    `https://mhbaando.herokuapp.com/api/projects?populate=*&filters[slug][$eq]=${params.slug}`
   );
 
   const { data } = await res.json();

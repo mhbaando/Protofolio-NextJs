@@ -11,8 +11,8 @@ const Model: React.FC = () => {
         <div
           className="mh__bgModel"
           id="model"
-          onClick={(e) => {
-            if (e.target.classList.value == 'mh__model') {
+          onClick={(e: any) => {
+            if (e.target?.classList.value == 'mh__model') {
               setIsModelOpen(false);
             }
             return;

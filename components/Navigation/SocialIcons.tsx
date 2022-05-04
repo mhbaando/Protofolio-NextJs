@@ -40,7 +40,7 @@ const SocialIcons: React.FC<Is4Header> = ({ place = 'nav' }) => {
     return (
       <Link href={icon.link} key={index}>
         <a target="_blank" title={icon.name}>
-          <Image src={icon.imgSrc} width={25} height={25} />
+          <Image src={icon.imgSrc} width={25} height={25} alt={icon.name} />
         </a>
       </Link>
     );

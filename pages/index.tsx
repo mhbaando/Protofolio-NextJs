@@ -24,6 +24,10 @@ const Home: NextPage = ({ data, clinetData }: any) => {
           name="keyword"
           content="mhbaando,mohamud,baando,fron-end,developer,webflow developer,"
         />
+        <meta
+          name="google-site-verification"
+          content="0ETz9GW4GPm6DkUbNU5UxxtKzBwmDHuWnlQsrVEqUjc"
+        />
         <meta name="author" content="Mohamud Abshir @mhbaando" />
         <meta property="og:title" content="Mohamud | Your WebApp Developer" />
         <meta property="og:site_name" content="mhbaando" />
