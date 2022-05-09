@@ -18,6 +18,14 @@ export interface IProject {
       data: [
         attributes: {
           url: string;
+          format: {
+            small: {
+              url: string;
+            };
+            medium: {
+              url: string;
+            };
+          };
         }
       ];
     };

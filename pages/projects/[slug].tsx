@@ -27,6 +27,14 @@ const Slug: NextPage = ({ data }: any) => {
     )
   );
 
+  // small image for bluring purpose
+  const blurURl = data.map((project: IProject) =>
+    project.attributes.screenshots.data.map(
+      (screeen: any) => screeen.attributes.formats.small.url
+    )
+  );
+
+  // full image
   const screenshot = data.map((project: IProject) =>
     project.attributes.screenshots.data.map(
       (screeen: any) => screeen.attributes.url
@@ -141,8 +149,10 @@ const Slug: NextPage = ({ data }: any) => {
             <div className="mh__projects--fullphoto">
               <Image
                 src={`${screenshot}`}
+                priority
                 layout="fill"
-                priority={true}
+                placeholder="blur"
+                blurDataURL={`${blurURl}`}
                 alt={mainData.title}
               />
             </div>

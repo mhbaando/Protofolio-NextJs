@@ -11,7 +11,6 @@ import {
 } from '../components/index';
 
 const Home: NextPage = ({ data, clinetData }: any) => {
-  console.log(data);
   return (
     <>
       <Head>
