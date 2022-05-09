@@ -30,7 +30,8 @@ const LastProjetcs: React.FC<Props> = ({
   // processing images in here
   // get the last 7 elements from the projetcs array
   const lastProj = filteredDataBasedOnTechSelected
-    .slice(limit ? 0 : undefined, limit ? 7 : undefined)
+    .slice(limit ? -7 : undefined)
+    .reverse()
     .map((project) => {
       imageURI = project.attributes.thumbnail.data?.attributes?.url;
       return (
