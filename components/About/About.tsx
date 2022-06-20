@@ -1,14 +1,14 @@
-import React from 'react';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { ServiceLists } from '../index';
-import { Heading, SubHeading } from '../index';
-import Techs from './Techs';
+import React from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { ServiceLists } from "../index";
+import { Heading, SubHeading } from "../index";
+import Techs from "./Techs";
 
 const About: React.FC = () => {
   // animation for the title and the about section
   const titleVarient = {
-    inView: { y: ['5%', '0%'], opacity: [0, 0.5, 1] },
+    inView: { y: ["5%", "0%"], opacity: [0, 0.5, 1] },
   };
   const serviceParent = {
     hidden: { opacity: 0 },
@@ -16,7 +16,7 @@ const About: React.FC = () => {
       opacity: 1,
       transition: {
         duration: 0.5,
-        easings: 'easeInOut',
+        easings: "easeInOut",
         staggerChildren: 0.8,
       },
     },
@@ -38,13 +38,13 @@ const About: React.FC = () => {
         animate="show"
         whileInView={{
           opacity: [0, 1],
-          y: [`${index % 2 === 0 ? '30%' : '60%'}`, '0%'],
+          y: [`${index % 2 === 0 ? "30%" : "60%"}`, "0%"],
         }}
         className="mh__about--service__list"
       >
         <motion.h2 variants={serviceChild}>
-          {service.name.split(' ')[0]} <br></br>
-          <span>{service.name.split(' ')[1]}</span>
+          {service.name.split(" ")[0]} <br></br>
+          <span>{service.name.split(" ")[1]}</span>
         </motion.h2>
         <motion.p variants={serviceChild}>{service.desc}</motion.p>
       </motion.div>
@@ -67,17 +67,16 @@ const About: React.FC = () => {
             <Heading heading="About me" />
             <div className="mh__about--me__info">
               <p>
-                I am a professional <span>front-end</span> developer,{' '}
-                <span>UI/X</span> Designer, <span>Co-founder</span>, and
-                <span> freelancer</span> with almost <span>2+ years</span> of
-                experience in developing websites using various technologies
-                with a background in <span>2D</span> Animation and{' '}
+                I am a professional <span>front-end</span> developer, <span>UI/X</span> Designer,{" "}
+                <span>Co-founder</span>, and
+                <span> freelancer</span> with alot of experience in developing websites using
+                various technologies with a background in <span>2D</span> Animation and{" "}
                 <span>Videography</span>.
               </p>
               <motion.div
                 className="icons"
-                whileInView={{ y: ['10%', '0%'], opacity: ['0', '1'] }}
-                transition={{ ease: 'easeInOut' }}
+                whileInView={{ y: ["10%", "0%"], opacity: ["0", "1"] }}
+                transition={{ ease: "easeInOut" }}
               >
                 <Techs />
               </motion.div>

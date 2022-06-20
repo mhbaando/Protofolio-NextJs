@@ -1,9 +1,9 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import React, { useContext, useEffect, useRef, useState } from 'react';
-import { SubHeading } from '../index';
-import type { LottiePlayer } from 'lottie-web';
-import { motion } from 'framer-motion';
+import Link from "next/link";
+import Image from "next/image";
+import React, { useContext, useEffect, useRef, useState } from "react";
+import { SubHeading } from "../index";
+import type { LottiePlayer } from "lottie-web";
+import { motion } from "framer-motion";
 
 const Hero: React.FC = () => {
   const refContainer = useRef<HTMLDivElement>(null);
@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
 
   // impor lottie
   useEffect(() => {
-    import('lottie-web').then((Lottie) => setLottie(Lottie.default));
+    import("lottie-web").then((Lottie) => setLottie(Lottie.default));
   }, []);
 
   // load the animation
@@ -19,10 +19,10 @@ const Hero: React.FC = () => {
     if (lottie && refContainer.current) {
       const animation = lottie.loadAnimation({
         container: refContainer.current,
-        renderer: 'svg',
+        renderer: "svg",
         loop: true,
         autoplay: true,
-        path: '/assets/svg/hand.json',
+        path: "/assets/svg/hand.json",
       });
 
       return () => animation.destroy();
@@ -36,48 +36,37 @@ const Hero: React.FC = () => {
           <SubHeading subheading="Introduction" />
           <div className="mh__header--content__title">
             <motion.div
-              whileInView={{ y: ['-10%', '0%'], opacity: [0, 0.5, 1] }}
+              whileInView={{ y: ["-10%", "0%"], opacity: [0, 0.5, 1] }}
               className="lottie__animation"
             >
               <h1>Hello</h1>
               <div className="handanimation" ref={refContainer}></div>
             </motion.div>
-            <motion.h1 whileInView={{ x: ['10%', '0%'], opacity: [0, 0.5, 1] }}>
+            <motion.h1 whileInView={{ x: ["10%", "0%"], opacity: [0, 0.5, 1] }}>
               I'm <span>Mohamud</span>
             </motion.h1>
           </div>
           <div className="mh__header--content__desc">
-            <motion.p whileInView={{ y: ['30%', '0%'], opacity: [0, 0.5, 1] }}>
-              Since beginning my journey as a freelance designer and Developer
-              nearby <span>2 years</span> I've done remote work for
-              <span> Agencies </span>
+            <motion.p whileInView={{ y: ["30%", "0%"], opacity: [0, 0.5, 1] }}>
+              Since beginning of my journey as a freelance designer and Developer I've done remote
+              work for <span> Agencies </span>
               consulted for startup and collaborated with
-              <span> Talented people </span> to create digital products
+              <span> talented people </span> to create digital products
             </motion.p>
           </div>
           <motion.div
-            whileInView={{ y: ['-50%', '0%'], opacity: [0, 0.5, 1] }}
+            whileInView={{ y: ["-50%", "0%"], opacity: [0, 0.5, 1] }}
             className="mh__header--content__btns"
           >
             <Link href="https://linkedin.com/in/mhbaando">
               <a className="primary" target="_blank">
-                <Image
-                  src="/assets/heroIcons/LinkedIn.svg"
-                  width={18}
-                  height={18}
-                  alt="mbaando"
-                />
+                <Image src="/assets/heroIcons/LinkedIn.svg" width={18} height={18} alt="mbaando" />
                 <p>LinkedIn</p>
               </a>
             </Link>
             <Link href="https://github.com/mhbaando">
               <a className="ghost" target="_blank">
-                <Image
-                  src="/assets/heroIcons/github.svg"
-                  width={18}
-                  height={18}
-                  alt="mhbaando"
-                />
+                <Image src="/assets/heroIcons/github.svg" width={18} height={18} alt="mhbaando" />
                 <p>GitHub</p>
               </a>
             </Link>
@@ -85,7 +74,7 @@ const Hero: React.FC = () => {
         </div>
         <motion.div
           whileInView={{
-            scale: ['60%', '100%'],
+            scale: ["60%", "100%"],
             opacity: [0, 1],
             transition: { delay: 0.15 },
           }}

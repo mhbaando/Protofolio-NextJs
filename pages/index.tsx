@@ -1,5 +1,6 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
+import type { NextPage } from "next";
+import Head from "next/head";
+import { useEffect } from "react";
 import {
   Navigation,
   HeroSection,
@@ -8,9 +9,11 @@ import {
   Clients,
   Contacts,
   Footer,
-} from '../components/index';
+} from "../components/index";
 
+import { useLoader } from "../context/loder-context";
 const Home: NextPage = ({ data, clinetData }: any) => {
+  const { isVisible } = useLoader();
   return (
     <>
       <Head>
@@ -81,13 +84,13 @@ export default Home;
 export const getServerSideProps = async () => {
   // projects
   const res = await fetch(
-    'https://mhbaando.herokuapp.com/api/projects?populate=*'
+    "https://mhbaando.herokuapp.com/api/projects?populate=*"
   );
   const { data } = await res.json();
 
   // clients
   const clientRes = await fetch(
-    'https://mhbaando.herokuapp.com/api/clients?populate=*'
+    "https://mhbaando.herokuapp.com/api/clients?populate=*"
   );
   const clinetData = await clientRes.json();
   return {
