@@ -1,15 +1,15 @@
-import React from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
-import { NextPage } from 'next';
+import React from "react";
+import Head from "next/head";
+import Image from "next/image";
+import { NextPage } from "next";
 import {
   Navigation,
   Heading,
   CallToAction,
   Footer,
-} from '../../components/index';
-import { IProject } from '../../interfaces/Iproject';
-import { motion } from 'framer-motion';
+} from "../../components/index";
+import { IProject } from "../../interfaces/Iproject";
+import { motion } from "framer-motion";
 
 const Slug: NextPage = ({ data }: any) => {
   // get the main data like title desctiption
@@ -80,8 +80,8 @@ const Slug: NextPage = ({ data }: any) => {
       <section
         style={{
           background: `linear-gradient(180deg, #19191B 0%, rgba(45, 48, 54, 0) 175.65%),url(${thumbanil})`,
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
+          backgroundPosition: "center",
+          backgroundSize: "cover",
         }}
       >
         <Navigation />
@@ -169,7 +169,7 @@ export default Slug;
 
 // gett all static paths
 export const getStaticPaths = async () => {
-  const res = await fetch('https://mhbaando.herokuapp.com/api/projects');
+  const res = await fetch("https://mhbaando.herokuapp.com/api/projects");
   const { data } = await res.json();
 
   const paths = data.map((project: IProject) => ({
@@ -200,6 +200,7 @@ export const getStaticProps = async ({ params }: any) => {
       props: {
         data,
       },
+      revalidate: 1000,
     };
   }
 };
