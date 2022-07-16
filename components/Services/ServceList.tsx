@@ -10,12 +10,13 @@ const ServiceLists: Iservices[] = [
     desc: 'I will develop your front-end website, with clean and understandable code.',
   },
   {
-    name: 'Webflow Developement',
-    desc: 'I will develop a simple and beautiful website with no code with Webflow.',
+    name: 'Webflow & Wordpress',
+    desc: 'I will develop a simple and beautiful website with no code with Webflow or wordpress',
   },
+
   {
-    name: 'Wordpress Developement',
-    desc: 'I will customize every WordPress theme for you, to match your needs.',
+    name: 'Motion Graphcics',
+    desc: 'I will design and create 2D animations that align your bussines brand.',
   },
 ];
 

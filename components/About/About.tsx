@@ -30,6 +30,7 @@ const About: React.FC = () => {
 
   // loop of the services
   const services = ServiceLists.map((service, index) => {
+    const [, ...yellow]= service.name.split(" ");
     return (
       <motion.div
         key={index}
@@ -44,7 +45,7 @@ const About: React.FC = () => {
       >
         <motion.h2 variants={serviceChild}>
           {service.name.split(" ")[0]} <br></br>
-          <span>{service.name.split(" ")[1]}</span>
+          <span>{yellow.join(" ")}</span>
         </motion.h2>
         <motion.p variants={serviceChild}>{service.desc}</motion.p>
       </motion.div>

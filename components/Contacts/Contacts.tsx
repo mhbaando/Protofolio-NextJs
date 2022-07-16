@@ -30,7 +30,6 @@ const Contacts: React.FC = () => {
                 'Location Icon',
                 'Makka Almukarama Street, Hodan, Mogadishu - Somalia'
               )}
-              {info('Phone #', 'Phone Icon', '+252 (0) 616 672 967')}
               {info(
                 'Email',
                 'Email Icon',

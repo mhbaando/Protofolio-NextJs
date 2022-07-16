@@ -88,6 +88,12 @@ const Techs: React.FC = () => {
         height={60}
         alt="Adobe XD logo"
       />
+       <Image
+        src="/assets/techs/Ae.svg"
+        width={60}
+        height={60}
+        alt="Adobe After Effect logo"
+      />
     </>
   );
 };

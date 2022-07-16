@@ -21,7 +21,7 @@ const Heading: React.FC<Title> = ({ heading }) => {
 
     // takt the rest of it, if it containts multple spaces and joing them to with spac to remove the comma, + sign menas concatitnae the strings with space betwen them
     const [, ...yellow] = heading.split(' ');
-    orangeHeading += yellow.join(' ');
+    orangeHeading += yellow.join(' ');    
   } else {
     // if there is no space the sentence
     whiteHeading = heading.substring(0, heading.length / 2);
